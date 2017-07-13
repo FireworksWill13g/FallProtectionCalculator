@@ -20,7 +20,7 @@ namespace FallProtectionCalculator
 
         private void ReqFallDist_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void LanyardLength_TextChanged(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace FallProtectionCalculator
             int DD = Convert.ToInt32(DecelDist.Text);
             int WH = Convert.ToInt32(WorkerHeight.Text);
             int SF = Convert.ToInt32(SftyFct.Text);
-
+            
 
             if (ReqFallDist == null && LanyardLength == null)
             {
@@ -90,7 +90,16 @@ namespace FallProtectionCalculator
             return vrs.ReqLanLeng;
         }
 
-
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            ReqFallDist.Clear();
+            ReqFallDist.ForeColor = System.Drawing.Color.Black;
+            LanyardLength.Clear();
+            LanyardLength.ForeColor = System.Drawing.Color.Black;
+            DecelDist.Clear();
+            WorkerHeight.Clear();
+            SftyFct.Clear();
+        }
     }
 }
 
